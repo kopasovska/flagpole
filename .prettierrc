@@ -1,4 +1,32 @@
 {
   "singleQuote": true,
-  "trailingComma": "all"
+  "trailingComma": "all",
+  "plugins": [
+    "@ianvs/prettier-plugin-sort-imports"
+  ],
+  "importOrder": [
+    "<BUILTIN_MODULES>",
+    "",
+    "^@nestjs/(.*)$",
+    "",
+    "<THIRD_PARTY_MODULES>",
+    "",
+    "^[./].*\\.module$",
+    "",
+    "^[./].*\\.controller$",
+    "",
+    "^[./].*\\.service$",
+    "",
+    "^[./].*\\.operation$",
+    "",
+    "^[./].*\\.repository$",
+    "",
+    "^[./].*\\.(schema|dto|types)$",
+    "",
+    "^[./]"
+  ],
+  "importOrderParserPlugins": [
+    "typescript",
+    "decorators-legacy"
+  ]
 }
